@@ -1,2 +1,1 @@
-# ransomware
-2 simple ransomware software
+in here there are many hacking tools that are unethical and dangerous use it on your own responsibility and cautious. If you are attempting to use this for any kind of job use a vpn or proxy chain or both. For proxy chain I use proxy switcher and I recommend it. I wrote them on my own and I am very young so give me some support :)
